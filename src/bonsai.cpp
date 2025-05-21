@@ -2,9 +2,8 @@
  Implementation of bonsai logic
 */
 #include <iostream>
-#include "bonsai.h"
 #include <vector>
-
+#include "../include/bonsai.h"
 
 
 
@@ -40,7 +39,7 @@ Bonsai createBonsai(){
 }
 
 void displayBonsai(const Bonsai& b) {
-    
+
     
 
 }

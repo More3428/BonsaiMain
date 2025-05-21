@@ -4,10 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "bonsai.h"
-
-
-
+#include "../include/bonsai.h"
 
 int main () {
 
