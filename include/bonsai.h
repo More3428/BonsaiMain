@@ -15,4 +15,8 @@ struct Bonsai {
     std::string notes; 
 };
 
+Bonsai createBonsai();
+
+void displayBonsai(const Bonsai& b);
+
 #endif
