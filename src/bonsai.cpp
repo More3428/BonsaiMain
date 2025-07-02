@@ -6,15 +6,23 @@
 #include "../include/bonsai.h"
 
 
+int nextId = 0;
 
 Bonsai createBonsai(){
+
+    int id;
     std::string name;
     std::string species;
     int age;
     std::string lastWatered;
     std::string lastPruned;
     std::string notes;
-
+    
+    
+    id = nextId;
+    nextId ++;
+    
+    std::cout << "Id: " << id << "\n";
     std::cout << "Enter the name of your Bonsai.\n";
     std::getline(std::cin,name);
 
@@ -33,20 +41,29 @@ Bonsai createBonsai(){
     
     std::cout << "Add any additional notes.\n";
     std::getline(std::cin,notes);
-    
-    return Bonsai{name, species, age, lastWatered, lastPruned, notes};
 
+    
+
+
+    
+    
+
+
+    
+    return Bonsai{ id, name, species, age, lastWatered, lastPruned, notes };
 }
 
 void displayBonsai(const Bonsai& b) {
 
     std::cout << "---------------------------\n";
+    std::cout << "ID:        : " << b.id          <<"\n";
     std::cout << "Name       : " << b.name        << "\n";
     std::cout << "Species    : " << b.species     << "\n";
     std::cout << "Age        : " << b.age         << "\n";
     std::cout << "Last Water : " << b.lastWatered << "\n";
     std::cout << "Last Prune : " << b.lastPruned  << "\n";
     std::cout << "Notes      : " << b.notes       << "\n";
+    
     std::cout << "---------------------------\n\n";
 
 }

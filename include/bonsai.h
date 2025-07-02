@@ -7,15 +7,19 @@ Bonsai struct and related functions
 #include <string>
 
 struct Bonsai {
+    int id;
     std::string name;
     std::string species;
     int age;
     std::string lastWatered;
     std::string lastPruned;
-    std::string notes; 
+    std::string notes;
+     
 };
 
 Bonsai createBonsai();
+
+// Bonsai deleteBonsai();
 
 void displayBonsai(const Bonsai& b);
 
