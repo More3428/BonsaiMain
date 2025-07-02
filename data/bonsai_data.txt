@@ -1,2 +1,2 @@
-Redwood;Juniper;2;05/21/2025;01/10/2024;Looks like a redwood tree
-Old Timer;Sawara Cypress;3;05/21/2025;2024;Recovered after drying out, doesnt do well in full sunlight
+test;test;4;test;test;test
+test;test;2;test;test;test
