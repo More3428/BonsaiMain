@@ -5,7 +5,7 @@
 #include <sstream>
 #include <vector>
 #include "../include/bonsai.h"
-#include "file_manager.h"
+#include "../include/file_manager.h"
 
 extern int nextId;  
 
@@ -21,14 +21,14 @@ std::vector<Bonsai> loadBonsaiList(const std::string& filename){
     while(std::getline(in, line)) {
         std::stringstream ss(line);
         Bonsai b;
-
+        ss >> b.id; ss.ignore();
         std::getline(ss, b.name, ';');
         std::getline(ss, b.species, ';');
         ss >> b.age; ss.ignore();             // read age and skip delimiter
         std::getline(ss, b.lastWatered, ';');
         std::getline(ss, b.lastPruned, ';');
         std::getline(ss, b.notes, ';');
-        ss >> b.id;
+        
 
         
         if (b.id > maxId) maxId = b.id;
