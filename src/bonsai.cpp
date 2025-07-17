@@ -3,7 +3,10 @@
 */
 #include <iostream>
 #include <vector>
+#include <fstream>
+
 #include "../include/bonsai.h"
+
 
 
 int nextId = 0;
@@ -17,7 +20,6 @@ Bonsai createBonsai(){
     std::string lastWatered;
     std::string lastPruned;
     std::string notes;
-    
     
     id = nextId;
     nextId ++;
@@ -41,16 +43,34 @@ Bonsai createBonsai(){
     
     std::cout << "Add any additional notes.\n";
     std::getline(std::cin,notes);
-
-    
-
-
-    
-    
-
-
     
     return Bonsai{ id, name, species, age, lastWatered, lastPruned, notes };
+}
+
+void deleteBonsai(std::vector<Bonsai>& bonsaiList) {
+    
+    int id; 
+    if (bonsaiList.empty()){
+        std::cout << "No trees to delete.";
+    }
+
+    for (Bonsai& tree : bonsaiList) {
+        displayBonsai(tree);
+    
+    }
+
+    std::cout << "Select a tree to delete by ID.\n";
+    std::cin >> id;
+
+    if (id < 0 || id >= bonsaiList.size()){
+        std::cout << "Invalid ID";
+    } 
+    else{
+        bonsaiList.erase(bonsaiList.begin() + id);
+        std::cout << "Tree deleted.\n"; 
+    }
+
+
 }
 
 void displayBonsai(const Bonsai& b) {

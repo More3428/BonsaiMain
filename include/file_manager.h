@@ -10,6 +10,6 @@
 
 std::vector<Bonsai> loadBonsaiList(const std::string& filename);
 
-bool saveBonsaiList(const std::vector<Bonsai>& list, const std::string& filename);
+bool saveBonsaiList(const std::vector<Bonsai>& bonsaiList, const std::string& filename);
 
 #endif

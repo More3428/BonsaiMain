@@ -19,7 +19,7 @@ struct Bonsai {
 
 Bonsai createBonsai();
 
-// Bonsai deleteBonsai();
+void deleteBonsai(std::vector<Bonsai>& bonsaiList);
 
 void displayBonsai(const Bonsai& b);
 
